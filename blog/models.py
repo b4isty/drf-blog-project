@@ -33,4 +33,14 @@ class Comment(models.Model):
     comment_text = models.CharField(max_length=500, null=True)
 
     def __str__(self):
-        return self.user.email
+        return self.comment_text
+
+
+class Like(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, models.CASCADE)
+    post = models.ForeignKey(Post, models.CASCADE)
+
+    def __str__(self):
+        return self.post.title
+
+

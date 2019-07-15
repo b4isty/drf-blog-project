@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'blog',
     'auth_user',
+    'profiles'
 ]
 
 AUTH_USER_MODEL = 'auth_user.CustomUser'
